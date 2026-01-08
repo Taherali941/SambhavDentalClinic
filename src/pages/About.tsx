@@ -1,0 +1,215 @@
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { Button } from "@/components/ui/button";
+import { StickyBookingButton } from "@/components/StickyBookingButton";
+import { Link } from "react-router-dom";
+import { Award, GraduationCap, Heart, Users, Calendar } from "lucide-react";
+import dentistPortrait from "@/assets/dentist-portrait.jpg";
+
+const credentials = [
+  "Bachelor of Dental Surgery (BDS)",
+  "Master of Dental Surgery (MDS) - Prosthodontics",
+  "Member, American Dental Association",
+  "Advanced Training in Dental Implants",
+  "Certified in Cosmetic Dentistry",
+];
+
+const values = [
+  {
+    icon: Heart,
+    title: "Patient-First Philosophy",
+    description: "Every decision we make is guided by what's best for your oral health and comfort.",
+  },
+  {
+    icon: Award,
+    title: "Excellence in Care",
+    description: "We stay updated with the latest techniques and technologies to provide the best outcomes.",
+  },
+  {
+    icon: Users,
+    title: "Family-Friendly",
+    description: "We treat patients of all ages, from toddlers to seniors, with the same gentle care.",
+  },
+];
+
+const AboutPage = () => {
+  return (
+    <div className="min-h-screen">
+      <Header />
+      <main className="pt-20">
+        {/* Hero Section */}
+        <section className="py-20 bg-gradient-to-br from-dental-teal-light via-background to-dental-sage-light">
+          <div className="container">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Content */}
+              <div>
+                <span className="inline-block text-sm font-semibold text-primary mb-3 tracking-wide uppercase">
+                  About Us
+                </span>
+                <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                  Meet Dr. Sarah Chen, Your Trusted Dental Expert
+                </h1>
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                  With over 15 years of experience in dental care, Dr. Chen has dedicated 
+                  her career to providing gentle, comprehensive dental services that 
+                  prioritize patient comfort and long-term oral health.
+                </p>
+                <p className="text-muted-foreground mb-8 leading-relaxed">
+                  Her philosophy is simple: every patient deserves honest, transparent care 
+                  delivered with kindness and expertise. Whether you're here for a routine 
+                  cleaning or a complex procedure, you'll receive the same exceptional attention.
+                </p>
+                <Link to="/contact">
+                  <Button variant="hero" size="lg">
+                    <Calendar className="w-5 h-5" />
+                    Book Appointment with Dr. Chen
+                  </Button>
+                </Link>
+              </div>
+
+              {/* Image */}
+              <div className="relative">
+                <img
+                  src={dentistPortrait}
+                  alt="Dr. Sarah Chen - Lead Dentist"
+                  className="rounded-3xl shadow-xl w-full object-cover aspect-[3/4]"
+                />
+                <div className="absolute -bottom-6 -left-6 bg-card rounded-2xl p-6 shadow-lg">
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center">
+                      <GraduationCap className="w-7 h-7 text-primary-foreground" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-foreground">15+ Years</p>
+                      <p className="text-sm text-muted-foreground">of Excellence</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Credentials Section */}
+        <section className="py-20 bg-secondary">
+          <div className="container">
+            <div className="max-w-3xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-foreground mb-4">
+                  Qualifications & Certifications
+                </h2>
+                <p className="text-muted-foreground">
+                  Dr. Chen's extensive training ensures you receive the highest standard of care.
+                </p>
+              </div>
+
+              <div className="bg-card rounded-2xl p-8 shadow-card">
+                <ul className="space-y-4">
+                  {credentials.map((credential) => (
+                    <li key={credential} className="flex items-center gap-4">
+                      <div className="w-10 h-10 rounded-full bg-dental-teal-light flex items-center justify-center flex-shrink-0">
+                        <Award className="w-5 h-5 text-primary" />
+                      </div>
+                      <span className="text-foreground font-medium">{credential}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Values Section */}
+        <section className="py-20">
+          <div className="container">
+            <div className="text-center max-w-2xl mx-auto mb-16">
+              <h2 className="text-3xl font-bold text-foreground mb-4">
+                Our Core Values
+              </h2>
+              <p className="text-muted-foreground text-lg">
+                These principles guide everything we do at SmileCare Dental Clinic.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {values.map((value) => (
+                <div key={value.title} className="text-center">
+                  <div className="w-16 h-16 rounded-2xl bg-dental-teal-light flex items-center justify-center mx-auto mb-6">
+                    <value.icon className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                    {value.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {value.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Our Clinic Section */}
+        <section className="py-20 bg-dental-cream">
+          <div className="container">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-bold text-foreground mb-6">
+                  State-of-the-Art Facilities
+                </h2>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  Our clinic is equipped with the latest dental technology to ensure accurate 
+                  diagnoses and effective treatments. From digital X-rays to advanced sterilization 
+                  systems, we maintain the highest standards of hygiene and safety.
+                </p>
+                <ul className="space-y-3 mb-8">
+                  {[
+                    "Digital X-ray technology",
+                    "Advanced sterilization protocols",
+                    "Comfortable treatment rooms",
+                    "Modern equipment & tools",
+                    "Relaxing, anxiety-free environment",
+                  ].map((item) => (
+                    <li key={item} className="flex items-center gap-3 text-foreground">
+                      <div className="w-2 h-2 rounded-full bg-primary" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div className="aspect-square rounded-2xl bg-dental-teal-light" />
+                <div className="aspect-square rounded-2xl bg-dental-mint" />
+                <div className="aspect-square rounded-2xl bg-dental-sage-light" />
+                <div className="aspect-square rounded-2xl bg-primary/20" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-primary">
+          <div className="container text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
+              Ready to Experience the SmileCare Difference?
+            </h2>
+            <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
+              Schedule your first appointment today and discover why thousands of patients 
+              trust Dr. Chen with their smiles.
+            </p>
+            <Link to="/contact">
+              <Button variant="heroOutline" size="xl" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                Book Your Appointment
+              </Button>
+            </Link>
+          </div>
+        </section>
+      </main>
+      <Footer />
+      <StickyBookingButton />
+    </div>
+  );
+};
+
+export default AboutPage;
