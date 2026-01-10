@@ -189,7 +189,7 @@ const ContactPage = () => {
                         8237100519
                       </a>
                       <p className="text-sm text-muted-foreground mt-1">
-                        Mon-Sat, 9:00 AM - 7:00 PM
+                        Open Every Day
                       </p>
                     </div>
                   </div>
@@ -221,16 +221,15 @@ const ContactPage = () => {
                       <h3 className="font-semibold text-foreground mb-2">Working Hours</h3>
                       <div className="text-sm space-y-1">
                         <p className="flex justify-between">
-                          <span className="text-muted-foreground">Monday - Friday</span>
-                          <span className="text-foreground">9:00 AM - 7:00 PM</span>
+                          <span className="text-muted-foreground">Morning</span>
+                          <span className="text-foreground">11:00 AM - 2:00 PM</span>
                         </p>
                         <p className="flex justify-between">
-                          <span className="text-muted-foreground">Saturday</span>
-                          <span className="text-foreground">9:00 AM - 5:00 PM</span>
+                          <span className="text-muted-foreground">Evening</span>
+                          <span className="text-foreground">6:00 PM - 9:00 PM</span>
                         </p>
                         <p className="flex justify-between">
-                          <span className="text-muted-foreground">Sunday</span>
-                          <span className="text-foreground">Closed</span>
+                          <span className="text-primary font-medium">Open Every Day</span>
                         </p>
                       </div>
                     </div>
