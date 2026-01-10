@@ -32,7 +32,7 @@ export function CTASection() {
                   Schedule Appointment
                 </Button>
               </Link>
-              <a href="tel:+1234567890">
+              <a href="tel:+918237100519">
                 <Button variant="heroOutline" size="xl" className="w-full sm:w-auto border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground/10">
                   <Phone className="w-5 h-5" />
                   Call Now
@@ -47,7 +47,7 @@ export function CTASection() {
               <MapPin className="w-8 h-8 text-primary-foreground mb-4" />
               <h4 className="font-semibold text-primary-foreground mb-2">Visit Our Clinic</h4>
               <p className="text-sm text-primary-foreground/80">
-                123 Dental Avenue, Healthcare District, City - 12345
+                Near Shree Clinic, Jambhulkar Complex, Shivaji Chowk, Hinjewadi, Pune - 57
               </p>
             </div>
             <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/20">
@@ -58,19 +58,12 @@ export function CTASection() {
                 Sunday: Closed
               </p>
             </div>
-            <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/20">
+            <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/20 sm:col-span-2">
               <Phone className="w-8 h-8 text-primary-foreground mb-4" />
               <h4 className="font-semibold text-primary-foreground mb-2">Call Us</h4>
               <p className="text-sm text-primary-foreground/80">
-                (123) 456-7890<br />
-                Emergency: (123) 456-7899
-              </p>
-            </div>
-            <div className="bg-accent/90 rounded-2xl p-6 text-accent-foreground">
-              <Calendar className="w-8 h-8 mb-4" />
-              <h4 className="font-semibold mb-2">Free Consultation</h4>
-              <p className="text-sm opacity-90">
-                Book a free consultation and get 10% off your first treatment!
+                Phone: 8237100519<br />
+                Email: priyankakaushal25@gmail.com
               </p>
             </div>
           </div>

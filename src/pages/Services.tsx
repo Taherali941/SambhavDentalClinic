@@ -52,7 +52,7 @@ const services = [
       "Infected tooth treatment",
       "Tooth preservation",
       "Post-treatment restoration",
-      "Same-day emergency care",
+      "Advanced pain management",
     ],
     painInfo: "Modern root canal treatment is virtually painless! We use advanced anesthesia and techniques to ensure a comfortable experience.",
   },
@@ -118,66 +118,52 @@ const ServicesPage = () => {
         {/* Services List */}
         <section className="py-20">
           <div className="container">
-            <div className="space-y-20">
-              {services.map((service, index) => (
+            <div className="space-y-16">
+              {services.map((service) => (
                 <div
                   key={service.id}
                   id={service.id}
-                  className={`grid lg:grid-cols-2 gap-12 items-center scroll-mt-24 ${
-                    index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                  }`}
+                  className="scroll-mt-24 bg-card rounded-3xl p-8 md:p-10 shadow-card"
                 >
-                  {/* Content */}
-                  <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="w-14 h-14 rounded-xl bg-dental-teal-light flex items-center justify-center">
-                        <service.icon className="w-7 h-7 text-primary" />
-                      </div>
-                      <h2 className="text-3xl font-bold text-foreground">
-                        {service.title}
-                      </h2>
+                  {/* Header */}
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 rounded-xl bg-dental-teal-light flex items-center justify-center">
+                      <service.icon className="w-7 h-7 text-primary" />
                     </div>
-                    <p className="text-lg text-muted-foreground mb-6">
-                      {service.description}
+                    <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                      {service.title}
+                    </h2>
+                  </div>
+
+                  <p className="text-lg text-muted-foreground mb-6">
+                    {service.description}
+                  </p>
+
+                  {/* Features */}
+                  <div className="grid md:grid-cols-2 gap-4 mb-6">
+                    {service.features.map((feature) => (
+                      <div key={feature} className="flex items-center gap-3">
+                        <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
+                        <span className="text-foreground">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Pain Info Box */}
+                  <div className="bg-dental-sage-light rounded-xl p-5 mb-6">
+                    <p className="text-sm font-medium text-accent mb-1">
+                      💡 Is this painful?
                     </p>
-
-                    {/* Features */}
-                    <ul className="space-y-3 mb-6">
-                      {service.features.map((feature) => (
-                        <li key={feature} className="flex items-center gap-3">
-                          <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
-                          <span className="text-foreground">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    {/* Pain Info Box */}
-                    <div className="bg-dental-sage-light rounded-xl p-5 mb-6">
-                      <p className="text-sm font-medium text-accent mb-1">
-                        💡 Is this painful?
-                      </p>
-                      <p className="text-sm text-foreground/80">
-                        {service.painInfo}
-                      </p>
-                    </div>
-
-                    <Link to="/contact">
-                      <Button variant="hero">
-                        Schedule Consultation
-                      </Button>
-                    </Link>
+                    <p className="text-sm text-foreground/80">
+                      {service.painInfo}
+                    </p>
                   </div>
 
-                  {/* Visual */}
-                  <div className={`${index % 2 === 1 ? "lg:order-1" : ""}`}>
-                    <div className="relative">
-                      <div className="aspect-[4/3] rounded-3xl bg-gradient-to-br from-dental-teal-light to-dental-mint flex items-center justify-center">
-                        <service.icon className="w-32 h-32 text-primary/30" />
-                      </div>
-                      <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-2xl -z-10" />
-                      <div className="absolute -top-4 -left-4 w-16 h-16 bg-accent/20 rounded-xl -z-10" />
-                    </div>
-                  </div>
+                  <Link to="/contact">
+                    <Button variant="hero">
+                      Schedule Consultation
+                    </Button>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -191,12 +177,12 @@ const ServicesPage = () => {
               Not Sure Which Treatment You Need?
             </h2>
             <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-              Book a free consultation and our dental experts will assess your needs 
+              Book a consultation and our dental experts will assess your needs 
               and recommend the best treatment plan for you.
             </p>
             <Link to="/contact">
               <Button variant="heroOutline" size="xl" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                Book Free Consultation
+                Book Consultation
               </Button>
             </Link>
           </div>

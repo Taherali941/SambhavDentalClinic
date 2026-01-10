@@ -7,11 +7,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import {
   Phone,
-  Mail,
   MapPin,
   Clock,
   Calendar,
-  AlertCircle,
 } from "lucide-react";
 
 const treatmentOptions = [
@@ -21,7 +19,6 @@ const treatmentOptions = [
   "Root Canal Treatment",
   "Dental Implants",
   "Orthodontics",
-  "Emergency Care",
   "Other",
 ];
 
@@ -30,7 +27,6 @@ const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    email: "",
     date: "",
     treatment: "",
     message: "",
@@ -59,7 +55,6 @@ const ContactPage = () => {
     setFormData({
       name: "",
       phone: "",
-      email: "",
       date: "",
       treatment: "",
       message: "",
@@ -110,7 +105,7 @@ const ContactPage = () => {
                         </label>
                         <Input
                           type="text"
-                          placeholder="John Doe"
+                          placeholder="Your Name"
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           className="h-12"
@@ -122,7 +117,7 @@ const ContactPage = () => {
                         </label>
                         <Input
                           type="tel"
-                          placeholder="(123) 456-7890"
+                          placeholder="Your Phone Number"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           className="h-12"
@@ -130,30 +125,16 @@ const ContactPage = () => {
                       </div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div>
-                        <label className="block text-sm font-medium text-foreground mb-2">
-                          Email Address
-                        </label>
-                        <Input
-                          type="email"
-                          placeholder="john@example.com"
-                          value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="h-12"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-sm font-medium text-foreground mb-2">
-                          Preferred Date
-                        </label>
-                        <Input
-                          type="date"
-                          value={formData.date}
-                          onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                          className="h-12"
-                        />
-                      </div>
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">
+                        Preferred Date
+                      </label>
+                      <Input
+                        type="date"
+                        value={formData.date}
+                        onChange={(e) => setFormData({ ...formData, date: e.target.value })}
+                        className="h-12"
+                      />
                     </div>
 
                     <div>
@@ -196,27 +177,6 @@ const ContactPage = () => {
 
               {/* Contact Info */}
               <div className="lg:col-span-2 space-y-6">
-                {/* Emergency Notice */}
-                <div className="bg-destructive/10 border border-destructive/20 rounded-2xl p-6">
-                  <div className="flex items-start gap-4">
-                    <AlertCircle className="w-6 h-6 text-destructive flex-shrink-0 mt-0.5" />
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-2">
-                        Dental Emergency?
-                      </h3>
-                      <p className="text-sm text-muted-foreground mb-3">
-                        For urgent dental issues, call our emergency line immediately.
-                      </p>
-                      <a href="tel:+1234567899">
-                        <Button variant="destructive" size="sm">
-                          <Phone className="w-4 h-4" />
-                          (123) 456-7899
-                        </Button>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
                 {/* Contact Cards */}
                 <div className="bg-card rounded-2xl p-6 shadow-card">
                   <div className="flex items-start gap-4">
@@ -225,28 +185,11 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Call Us</h3>
-                      <a href="tel:+1234567890" className="text-primary font-medium">
-                        (123) 456-7890
+                      <a href="tel:+918237100519" className="text-primary font-medium">
+                        8237100519
                       </a>
                       <p className="text-sm text-muted-foreground mt-1">
                         Mon-Sat, 9:00 AM - 7:00 PM
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-card rounded-2xl p-6 shadow-card">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-dental-teal-light flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">Email Us</h3>
-                      <a href="mailto:hello@smilecare.com" className="text-primary font-medium">
-                        hello@smilecare.com
-                      </a>
-                      <p className="text-sm text-muted-foreground mt-1">
-                        We'll respond within 24 hours
                       </p>
                     </div>
                   </div>
@@ -260,9 +203,10 @@ const ContactPage = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Visit Us</h3>
                       <p className="text-foreground">
-                        123 Dental Avenue<br />
-                        Healthcare District<br />
-                        City - 12345
+                        Near Shree Clinic,<br />
+                        Jambhulkar Complex,<br />
+                        Shivaji Chowk, Hinjewadi,<br />
+                        Pune - 57
                       </p>
                     </div>
                   </div>
@@ -292,28 +236,6 @@ const ContactPage = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Map Section */}
-        <section className="py-10 pb-20">
-          <div className="container">
-            <div className="bg-dental-teal-light rounded-3xl h-80 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
-                <p className="text-lg font-medium text-foreground">
-                  123 Dental Avenue, Healthcare District, City - 12345
-                </p>
-                <a
-                  href="https://maps.google.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary underline mt-2 inline-block"
-                >
-                  Open in Google Maps
-                </a>
               </div>
             </div>
           </div>

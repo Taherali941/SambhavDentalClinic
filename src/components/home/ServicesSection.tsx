@@ -92,16 +92,16 @@ export function ServicesSection() {
           {/* CTA Card */}
           <div className="bg-primary rounded-2xl p-8 flex flex-col justify-center text-primary-foreground">
             <h3 className="text-2xl font-bold mb-3">
-              Need Emergency Dental Care?
+              Ready to Transform Your Smile?
             </h3>
             <p className="text-primary-foreground/80 mb-6">
-              We offer same-day emergency appointments for urgent dental issues.
+              Book an appointment today and experience gentle, professional dental care.
             </p>
-            <a href="tel:+1234567890">
+            <Link to="/contact">
               <Button variant="heroOutline" className="w-full">
-                Call Emergency Line
+                Book Appointment
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
 

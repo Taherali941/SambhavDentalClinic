@@ -25,7 +25,7 @@ export function Footer() {
                 </svg>
               </div>
               <div>
-                <span className="font-bold text-lg">SmileCare</span>
+                <span className="font-bold text-lg">Sambhav</span>
                 <span className="block text-xs opacity-70">Dental Clinic</span>
               </div>
             </Link>
@@ -52,6 +52,7 @@ export function Footer() {
               <li><Link to="/" className="hover:text-primary transition-colors">Home</Link></li>
               <li><Link to="/services" className="hover:text-primary transition-colors">Our Services</Link></li>
               <li><Link to="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link to="/blog" className="hover:text-primary transition-colors">Dental Blog</Link></li>
               <li><Link to="/testimonials" className="hover:text-primary transition-colors">Patient Reviews</Link></li>
               <li><Link to="/contact" className="hover:text-primary transition-colors">Book Appointment</Link></li>
             </ul>
@@ -75,15 +76,15 @@ export function Footer() {
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 mt-0.5 text-primary" />
-                <span className="opacity-80">123 Dental Avenue, Healthcare District, City - 12345</span>
+                <span className="opacity-80">Near Shree Clinic, Jambhulkar Complex, Shivaji Chowk, Hinjewadi, Pune - 57</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary" />
-                <a href="tel:+1234567890" className="opacity-80 hover:text-primary transition-colors">(123) 456-7890</a>
+                <a href="tel:+918237100519" className="opacity-80 hover:text-primary transition-colors">8237100519</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary" />
-                <a href="mailto:hello@smilecare.com" className="opacity-80 hover:text-primary transition-colors">hello@smilecare.com</a>
+                <a href="mailto:priyankakaushal25@gmail.com" className="opacity-80 hover:text-primary transition-colors">priyankakaushal25@gmail.com</a>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-5 h-5 mt-0.5 text-primary" />
@@ -96,9 +97,23 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Google Map */}
+        <div className="mt-12 rounded-2xl overflow-hidden h-64">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.7877785454543!2d73.72851507586095!3d18.59033886713542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bbc0aaaaaaab%3A0xaaaaaaaaaaaaaaaa!2sHinjewadi%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Sambhav Dental Clinic Location"
+          />
+        </div>
+
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm opacity-70">
-          <p>© 2024 SmileCare Dental Clinic. All rights reserved.</p>
+          <p>© 2024 Sambhav Dental Clinic. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>

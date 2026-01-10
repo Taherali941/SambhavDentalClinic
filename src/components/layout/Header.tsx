@@ -7,6 +7,7 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
   { name: "About", href: "/about" },
+  { name: "Blog", href: "/blog" },
   { name: "Testimonials", href: "/testimonials" },
   { name: "Contact", href: "/contact" },
 ];
@@ -36,7 +37,7 @@ export function Header() {
             </svg>
           </div>
           <div>
-            <span className="font-bold text-lg text-foreground">SmileCare</span>
+            <span className="font-bold text-lg text-foreground">Sambhav</span>
             <span className="block text-xs text-muted-foreground">Dental Clinic</span>
           </div>
         </Link>
@@ -60,9 +61,9 @@ export function Header() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <a href="tel:+1234567890" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+          <a href="tel:+918237100519" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
             <Phone className="w-4 h-4" />
-            <span>(123) 456-7890</span>
+            <span>8237100519</span>
           </a>
           <Link to="/contact">
             <Button variant="hero" size="default">
@@ -100,11 +101,11 @@ export function Header() {
             ))}
             <div className="pt-4 border-t border-border space-y-3">
               <a
-                href="tel:+1234567890"
+                href="tel:+918237100519"
                 className="flex items-center gap-2 text-sm text-primary"
               >
                 <Phone className="w-4 h-4" />
-                <span>(123) 456-7890</span>
+                <span>8237100519</span>
               </a>
               <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
                 <Button variant="hero" className="w-full">
