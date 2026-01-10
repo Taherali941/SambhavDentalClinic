@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -20,26 +21,12 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md border-b border-border">
       <nav className="container flex items-center justify-between py-4">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-            <svg
-              className="w-6 h-6 text-primary-foreground"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-              />
-            </svg>
-          </div>
-          <div>
-            <span className="font-bold text-lg text-foreground">Sambhav</span>
-            <span className="block text-xs text-muted-foreground">Dental Clinic</span>
-          </div>
+        <Link to="/" className="flex items-center">
+          <img 
+            src={logo} 
+            alt="Sambhav Dental Clinic" 
+            className="h-12 md:h-14 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop Navigation */}
