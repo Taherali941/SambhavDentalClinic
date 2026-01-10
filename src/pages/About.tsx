@@ -9,7 +9,7 @@ import dentistPortrait from "@/assets/dentist-portrait.jpg";
 const credentials = [
   "Bachelor of Dental Surgery (BDS)",
   "Master of Dental Surgery (MDS) - Prosthodontics",
-  "Member, American Dental Association",
+  "Member, Indian Dental Association",
   "Advanced Training in Dental Implants",
   "Certified in Cosmetic Dentistry",
 ];
@@ -47,10 +47,10 @@ const AboutPage = () => {
                   About Us
                 </span>
                 <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                  Meet Dr. Sarah Chen, Your Trusted Dental Expert
+                  Meet Dr. Priyanka Kaushal, Your Trusted Dental Expert
                 </h1>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  With over 15 years of experience in dental care, Dr. Chen has dedicated 
+                  With over 15 years of experience in dental care, Dr. Priyanka Kaushal has dedicated 
                   her career to providing gentle, comprehensive dental services that 
                   prioritize patient comfort and long-term oral health.
                 </p>
@@ -62,7 +62,7 @@ const AboutPage = () => {
                 <Link to="/contact">
                   <Button variant="hero" size="lg">
                     <Calendar className="w-5 h-5" />
-                    Book Appointment with Dr. Chen
+                    Book Appointment with Dr. Priyanka
                   </Button>
                 </Link>
               </div>
@@ -71,7 +71,7 @@ const AboutPage = () => {
               <div className="relative">
                 <img
                   src={dentistPortrait}
-                  alt="Dr. Sarah Chen - Lead Dentist"
+                  alt="Dr. Priyanka Kaushal - Lead Dentist"
                   className="rounded-3xl shadow-xl w-full object-cover aspect-[3/4]"
                 />
                 <div className="absolute -bottom-6 -left-6 bg-card rounded-2xl p-6 shadow-lg">
@@ -99,7 +99,7 @@ const AboutPage = () => {
                   Qualifications & Certifications
                 </h2>
                 <p className="text-muted-foreground">
-                  Dr. Chen's extensive training ensures you receive the highest standard of care.
+                  Dr. Priyanka's extensive training ensures you receive the highest standard of care.
                 </p>
               </div>
 
@@ -127,7 +127,7 @@ const AboutPage = () => {
                 Our Core Values
               </h2>
               <p className="text-muted-foreground text-lg">
-                These principles guide everything we do at SmileCare Dental Clinic.
+                These principles guide everything we do at Sambhav Dental Clinic.
               </p>
             </div>
 
@@ -149,54 +149,15 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* Our Clinic Section */}
-        <section className="py-20 bg-dental-cream">
-          <div className="container">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl font-bold text-foreground mb-6">
-                  State-of-the-Art Facilities
-                </h2>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Our clinic is equipped with the latest dental technology to ensure accurate 
-                  diagnoses and effective treatments. From digital X-rays to advanced sterilization 
-                  systems, we maintain the highest standards of hygiene and safety.
-                </p>
-                <ul className="space-y-3 mb-8">
-                  {[
-                    "Digital X-ray technology",
-                    "Advanced sterilization protocols",
-                    "Comfortable treatment rooms",
-                    "Modern equipment & tools",
-                    "Relaxing, anxiety-free environment",
-                  ].map((item) => (
-                    <li key={item} className="flex items-center gap-3 text-foreground">
-                      <div className="w-2 h-2 rounded-full bg-primary" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4">
-                <div className="aspect-square rounded-2xl bg-dental-teal-light" />
-                <div className="aspect-square rounded-2xl bg-dental-mint" />
-                <div className="aspect-square rounded-2xl bg-dental-sage-light" />
-                <div className="aspect-square rounded-2xl bg-primary/20" />
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-primary">
           <div className="container text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-              Ready to Experience the SmileCare Difference?
+              Ready to Experience the Sambhav Difference?
             </h2>
             <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
               Schedule your first appointment today and discover why thousands of patients 
-              trust Dr. Chen with their smiles.
+              trust Dr. Priyanka Kaushal with their smiles.
             </p>
             <Link to="/contact">
               <Button variant="heroOutline" size="xl" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
