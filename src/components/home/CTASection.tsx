@@ -54,8 +54,9 @@ export function CTASection() {
               <Clock className="w-8 h-8 text-primary-foreground mb-4" />
               <h4 className="font-semibold text-primary-foreground mb-2">Working Hours</h4>
               <p className="text-sm text-primary-foreground/80">
-                Mon - Sat: 9:00 AM - 7:00 PM<br />
-                Sunday: Closed
+                11:00 AM - 2:00 PM<br />
+                6:00 PM - 9:00 PM<br />
+                <span className="text-primary-foreground font-medium">Open Every Day</span>
               </p>
             </div>
             <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/20 sm:col-span-2">

@@ -7,6 +7,7 @@ import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { BlogSection } from "@/components/home/BlogSection";
 import { CTASection } from "@/components/home/CTASection";
 import { StickyBookingButton } from "@/components/StickyBookingButton";
+import { FloatingContactButtons } from "@/components/FloatingContactButtons";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
       </main>
       <Footer />
       <StickyBookingButton />
+      <FloatingContactButtons />
     </div>
   );
 };
