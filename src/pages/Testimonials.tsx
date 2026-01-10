@@ -97,7 +97,7 @@ const TestimonialsPage = () => {
               </h1>
               <p className="text-lg text-muted-foreground mb-8">
                 Real experiences from real patients. See why thousands of families 
-                trust SmileCare Dental Clinic with their smiles.
+                trust Sambhav Dental Clinic with their smiles.
               </p>
 
               {/* Google Rating Badge */}
