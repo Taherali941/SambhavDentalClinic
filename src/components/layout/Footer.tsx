@@ -89,8 +89,9 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <Clock className="w-5 h-5 mt-0.5 text-primary" />
                 <div className="opacity-80">
-                  <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
-                  <p>Sunday: Closed</p>
+                  <p>11:00 AM - 2:00 PM</p>
+                  <p>6:00 PM - 9:00 PM</p>
+                  <p className="text-primary">Open Every Day</p>
                 </div>
               </li>
             </ul>
@@ -100,7 +101,7 @@ export function Footer() {
         {/* Google Map */}
         <div className="mt-12 rounded-2xl overflow-hidden h-64">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.7877785454543!2d73.72851507586095!3d18.59033886713542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bbc0aaaaaaab%3A0xaaaaaaaaaaaaaaaa!2sHinjewadi%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.599902111458!2d73.73542707496476!3d18.592068182515465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb38561bcd85%3A0x4a9b45e1a5440698!2sSambhav%20Dental%20Clinic!5e0!3m2!1sen!2sin!4v1768040643808!5m2!1sen!2sin"
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -113,10 +114,13 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm opacity-70">
-          <p>© 2024 Sambhav Dental Clinic. All rights reserved.</p>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+          <p>© 2026 Sambhav Dental Clinic. All rights reserved.</p>
+          <div className="flex flex-col md:flex-row items-center gap-4">
+            <div className="flex gap-6">
+              <Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
+            </div>
+            <p className="text-xs">Designed & Developed by <span className="text-primary font-medium">Taher Ali</span></p>
           </div>
         </div>
       </div>

@@ -85,7 +85,7 @@ export function WhyChooseUsSection() {
                   <p className="text-sm opacity-80">Years of Experience</p>
                 </div>
                 <div className="text-center p-6 rounded-2xl bg-primary-foreground/10">
-                  <p className="text-5xl font-bold mb-2">5K+</p>
+                  <p className="text-5xl font-bold mb-2">10K+</p>
                   <p className="text-sm opacity-80">Happy Patients</p>
                 </div>
                 <div className="text-center p-6 rounded-2xl bg-primary-foreground/10">
