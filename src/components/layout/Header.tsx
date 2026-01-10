@@ -25,7 +25,7 @@ export function Header() {
           <img 
             src={logo} 
             alt="Sambhav Dental Clinic" 
-            className="h-12 md:h-14 w-auto object-contain"
+            className="h-12 md:h-14 w-auto object-contain bg-white rounded-lg p-1 shadow-sm"
           />
         </Link>
 

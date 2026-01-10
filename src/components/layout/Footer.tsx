@@ -13,7 +13,7 @@ export function Footer() {
               <img 
                 src={logo} 
                 alt="Sambhav Dental Clinic" 
-                className="h-14 w-auto object-contain bg-white rounded-lg p-1"
+                className="h-14 w-auto object-contain bg-white rounded-lg p-2 shadow-sm"
               />
             </Link>
             <p className="text-sm opacity-80 leading-relaxed">
