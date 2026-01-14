@@ -47,16 +47,16 @@ export function CTASection() {
               <MapPin className="w-8 h-8 text-primary-foreground mb-4" />
               <h4 className="font-semibold text-primary-foreground mb-2">Visit Our Clinic</h4>
               <p className="text-sm text-primary-foreground/80">
-                Near Shree Clinic, Jambhulkar Complex, Shivaji Chowk, Hinjewadi, Pune - 57
+                Near Metrostation, Jambhulkar Complex, Shivaji Chowk, Hinjewadi, Pune - 57
               </p>
             </div>
             <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/20">
               <Clock className="w-8 h-8 text-primary-foreground mb-4" />
               <h4 className="font-semibold text-primary-foreground mb-2">Working Hours</h4>
               <p className="text-sm text-primary-foreground/80">
+                <span className="text-primary-foreground font-medium">Monday - Sunday</span><br />
                 11:00 AM - 2:00 PM<br />
-                6:00 PM - 9:00 PM<br />
-                <span className="text-primary-foreground font-medium">Open Every Day</span>
+                6:00 PM - 9:00 PM
               </p>
             </div>
             <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/20 sm:col-span-2">

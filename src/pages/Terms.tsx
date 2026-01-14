@@ -39,7 +39,7 @@ const Terms = () => {
 
             <h2 className="text-2xl font-semibold text-foreground mt-8">Clinic Hours</h2>
             <p>
-              Our clinic is open every day:<br />
+              Monday - Sunday<br />
               Morning: 11:00 AM - 2:00 PM<br />
               Evening: 6:00 PM - 9:00 PM
             </p>
@@ -47,7 +47,7 @@ const Terms = () => {
             <h2 className="text-2xl font-semibold text-foreground mt-8">Contact Information</h2>
             <p>
               Sambhav Dental Clinic<br />
-              Near Shree Clinic, Jambhulkar Complex, Shivaji Chowk, Hinjewadi, Pune - 57<br />
+              Near Metrostation, Jambhulkar Complex, Shivaji Chowk, Hinjewadi, Pune - 57<br />
               Phone: 8237100519<br />
               Email: priyankakaushal25@gmail.com
             </p>

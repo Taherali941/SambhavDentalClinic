@@ -189,7 +189,7 @@ const ContactPage = () => {
                         8237100519
                       </a>
                       <p className="text-sm text-muted-foreground mt-1">
-                        Open Every Day
+                        Monday - Sunday
                       </p>
                     </div>
                   </div>
@@ -203,7 +203,7 @@ const ContactPage = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Visit Us</h3>
                       <p className="text-foreground">
-                        Near Shree Clinic,<br />
+                        Near Metrostation,<br />
                         Jambhulkar Complex,<br />
                         Shivaji Chowk, Hinjewadi,<br />
                         Pune - 57
@@ -228,9 +228,7 @@ const ContactPage = () => {
                           <span className="text-muted-foreground">Evening</span>
                           <span className="text-foreground">6:00 PM - 9:00 PM</span>
                         </p>
-                        <p className="flex justify-between">
-                          <span className="text-primary font-medium">Open Every Day</span>
-                        </p>
+                        <p className="text-primary font-medium">Monday - Sunday</p>
                       </div>
                     </div>
                   </div>

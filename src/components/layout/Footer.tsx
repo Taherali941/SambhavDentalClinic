@@ -63,7 +63,7 @@ export function Footer() {
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 mt-0.5 text-primary" />
-                <span className="opacity-80">Near Shree Clinic, Jambhulkar Complex, Shivaji Chowk, Hinjewadi, Pune - 57</span>
+                <span className="opacity-80">Near Metrostation, Jambhulkar Complex, Shivaji Chowk, Hinjewadi, Pune - 57</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary" />
@@ -76,9 +76,9 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <Clock className="w-5 h-5 mt-0.5 text-primary" />
                 <div className="opacity-80">
+                  <p className="text-primary font-medium">Monday - Sunday</p>
                   <p>11:00 AM - 2:00 PM</p>
                   <p>6:00 PM - 9:00 PM</p>
-                  <p className="text-primary">Open Every Day</p>
                 </div>
               </li>
             </ul>
