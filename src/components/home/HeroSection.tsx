@@ -61,7 +61,7 @@ export function HeroSection() {
                 <Shield className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <p className="text-2xl font-bold text-primary-foreground">15+</p>
+                <p className="text-2xl font-bold text-primary-foreground">20+</p>
                 <p className="text-sm text-primary-foreground/70">Years Experience</p>
               </div>
             </div>
