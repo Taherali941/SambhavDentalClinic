@@ -4,17 +4,17 @@ export function FloatingContactButtons() {
   const whatsappMessage = encodeURIComponent("Hi! I saw your dental clinic on Google. I'd like to book an appointment for a check-up. What are your next available slots?");
   
   return (
-    <div className="fixed right-4 bottom-24 z-50 flex flex-col gap-3">
+    <div className="fixed right-4 bottom-20 md:bottom-24 z-40 flex flex-col gap-3">
       {/* WhatsApp Button */}
       <a
         href={`https://wa.me/8237100519?text=${whatsappMessage}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+        className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
         aria-label="Chat on WhatsApp"
       >
         <svg
-          className="w-7 h-7"
+          className="w-6 h-6 md:w-7 md:h-7"
           fill="currentColor"
           viewBox="0 0 24 24"
         >
@@ -25,10 +25,10 @@ export function FloatingContactButtons() {
       {/* Call Button */}
       <a
         href="tel:+918237100519"
-        className="w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+        className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
         aria-label="Call us"
       >
-        <Phone className="w-6 h-6" />
+        <Phone className="w-5 h-5 md:w-6 md:h-6" />
       </a>
     </div>
   );
