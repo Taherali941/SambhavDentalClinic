@@ -50,7 +50,7 @@ const AboutPage = () => {
                   Meet Dr. Priyanka Kaushal, Your Trusted Dental Expert
                 </h1>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  With over 15 years of experience in dental care, Dr. Priyanka Kaushal has dedicated 
+                  With over 20 years of experience in dental care, Dr. Priyanka Kaushal has dedicated 
                   her career to providing gentle, comprehensive dental services that 
                   prioritize patient comfort and long-term oral health.
                 </p>
@@ -80,7 +80,7 @@ const AboutPage = () => {
                       <GraduationCap className="w-7 h-7 text-primary-foreground" />
                     </div>
                     <div>
-                      <p className="font-bold text-foreground">15+ Years</p>
+                      <p className="font-bold text-foreground">20+ Years</p>
                       <p className="text-sm text-muted-foreground">of Excellence</p>
                     </div>
                   </div>

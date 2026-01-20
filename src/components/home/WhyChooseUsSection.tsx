@@ -81,7 +81,7 @@ export function WhyChooseUsSection() {
             <div className="bg-primary rounded-3xl p-10 text-primary-foreground">
               <div className="grid grid-cols-2 gap-8">
                 <div className="text-center p-6 rounded-2xl bg-primary-foreground/10">
-                  <p className="text-5xl font-bold mb-2">15+</p>
+                  <p className="text-5xl font-bold mb-2">20+</p>
                   <p className="text-sm opacity-80">Years of Experience</p>
                 </div>
                 <div className="text-center p-6 rounded-2xl bg-primary-foreground/10">
