@@ -1,4 +1,4 @@
-import { Shield, Heart, Sparkles, Award, Users, Clock } from "lucide-react";
+import { Shield, Heart, Sparkles, Award, Users, Clock, Star, Calendar, Stethoscope, CheckCircle2 } from "lucide-react";
 
 const features = [
   {
@@ -81,18 +81,22 @@ export function WhyChooseUsSection() {
             <div className="bg-primary rounded-2xl md:rounded-3xl p-6 md:p-10 text-primary-foreground">
               <div className="grid grid-cols-2 gap-4 md:gap-8">
                 <div className="text-center p-4 md:p-6 rounded-xl md:rounded-2xl bg-primary-foreground/10">
+                  <Calendar className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 opacity-80" />
                   <p className="text-3xl md:text-5xl font-bold mb-1 md:mb-2">20+</p>
                   <p className="text-xs md:text-sm opacity-80">Years of Experience</p>
                 </div>
                 <div className="text-center p-4 md:p-6 rounded-xl md:rounded-2xl bg-primary-foreground/10">
+                  <Users className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 opacity-80" />
                   <p className="text-3xl md:text-5xl font-bold mb-1 md:mb-2">10K+</p>
                   <p className="text-xs md:text-sm opacity-80">Happy Patients</p>
                 </div>
                 <div className="text-center p-4 md:p-6 rounded-xl md:rounded-2xl bg-primary-foreground/10">
+                  <Star className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 opacity-80" />
                   <p className="text-3xl md:text-5xl font-bold mb-1 md:mb-2">4.9</p>
                   <p className="text-xs md:text-sm opacity-80">Google Rating</p>
                 </div>
                 <div className="text-center p-4 md:p-6 rounded-xl md:rounded-2xl bg-primary-foreground/10">
+                  <CheckCircle2 className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 opacity-80" />
                   <p className="text-3xl md:text-5xl font-bold mb-1 md:mb-2">98%</p>
                   <p className="text-xs md:text-sm opacity-80">Success Rate</p>
                 </div>

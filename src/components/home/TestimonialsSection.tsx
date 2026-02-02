@@ -4,25 +4,32 @@ import { Star, Quote, ArrowRight } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Mitchell",
+    name: "Priya Sharma",
     role: "Patient since 2021",
     rating: 5,
-    content: "Very gentle treatment, explained everything clearly. The staff made me feel so comfortable. Highly recommended for anyone with dental anxiety!",
-    avatar: "SM",
+    content: "Dr. Priyanka is extremely gentle and professional. My root canal was completely painless! The clinic is spotless and the staff is very caring. Highly recommend for anyone in Hinjewadi.",
+    avatar: "PS",
   },
   {
-    name: "James Wilson",
+    name: "Rahul Deshmukh",
     role: "Patient since 2019",
     rating: 5,
-    content: "Clean clinic, painless root canal, friendly staff. I was dreading the procedure but Dr. Chen made it completely stress-free. Best dental experience ever.",
-    avatar: "JW",
+    content: "Best dental clinic in Pune! Got my dental implants done here and the results are amazing. The transparent pricing and follow-up care is exceptional.",
+    avatar: "RD",
   },
   {
-    name: "Emily Rodriguez",
+    name: "Sneha Kulkarni",
     role: "Patient since 2022",
     rating: 5,
-    content: "The whole family comes here now. Kids love the gentle approach, and we love the transparent pricing. No surprises, just great care.",
-    avatar: "ER",
+    content: "The whole family comes here now. Kids love Dr. Priyanka's gentle approach, and we appreciate the honest consultations. No unnecessary treatments recommended.",
+    avatar: "SK",
+  },
+  {
+    name: "Amit Patil",
+    role: "Patient since 2023",
+    rating: 5,
+    content: "Got my teeth whitening done here and the results exceeded my expectations! Modern equipment, hygienic environment, and very reasonable prices. Five stars!",
+    avatar: "AP",
   },
 ];
 

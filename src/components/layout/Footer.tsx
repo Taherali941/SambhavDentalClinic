@@ -49,11 +49,11 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-base mb-4">Our Services</h4>
             <ul className="space-y-3 text-sm opacity-80">
-              <li>General Dentistry</li>
-              <li>Cosmetic Dentistry</li>
-              <li>Root Canal Treatment</li>
-              <li>Dental Implants</li>
-              <li>Orthodontics</li>
+              <li><Link to="/services#general" className="hover:text-primary transition-colors">General Dentistry</Link></li>
+              <li><Link to="/services#cosmetic" className="hover:text-primary transition-colors">Cosmetic Dentistry</Link></li>
+              <li><Link to="/services#root-canal" className="hover:text-primary transition-colors">Root Canal Treatment</Link></li>
+              <li><Link to="/services#implants" className="hover:text-primary transition-colors">Dental Implants</Link></li>
+              <li><Link to="/services#orthodontics" className="hover:text-primary transition-colors">Orthodontics</Link></li>
             </ul>
           </div>
 
