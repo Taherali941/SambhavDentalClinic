@@ -1,12 +1,19 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingContactButtons } from "@/components/FloatingContactButtons";
+import { SEO } from "@/components/SEO";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="min-h-screen">
-      <Header />
-      <main className="py-20">
+    <>
+      <SEO
+        title="Privacy Policy | Sambhav Dental Clinic"
+        description="Read the privacy policy of Sambhav Dental Clinic. Learn how we collect, use, and protect your personal and medical information."
+        canonical="/privacy"
+      />
+      <div className="min-h-screen">
+        <Header />
+        <main className="py-20">
         <div className="container max-w-4xl">
           <h1 className="text-4xl font-bold text-foreground mb-8">Privacy Policy</h1>
           
@@ -51,10 +58,11 @@ const PrivacyPolicy = () => {
             <p className="text-sm mt-8">Last updated: January 2026</p>
           </div>
         </div>
-      </main>
-      <Footer />
-      <FloatingContactButtons />
-    </div>
+        </main>
+        <Footer />
+        <FloatingContactButtons />
+      </div>
+    </>
   );
 };
 

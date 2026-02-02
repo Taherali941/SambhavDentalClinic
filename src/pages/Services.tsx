@@ -3,6 +3,8 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { StickyBookingButton } from "@/components/StickyBookingButton";
 import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
+import { Helmet } from "react-helmet-async";
 import {
   Heart,
   Sparkles,
@@ -87,10 +89,40 @@ const services = [
 ];
 
 const ServicesPage = () => {
+  // Services Schema for SEO
+  const servicesSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    name: "Sambhav Dental Clinic",
+    medicalSpecialty: "Dentistry",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Dental Services",
+      itemListElement: services.map((service) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: service.title,
+          description: service.description,
+        },
+      })),
+    },
+  };
+
   return (
-    <div className="min-h-screen">
-      <Header />
-      <main className="pt-20">
+    <>
+      <SEO
+        title="Dental Services | Root Canal, Implants, Braces | Sambhav Dental Clinic"
+        description="Comprehensive dental services in Hinjewadi, Pune: painless root canal, dental implants, teeth whitening, braces & Invisalign, cosmetic dentistry. Affordable pricing by Dr. Priyanka Kaushal."
+        keywords="dental services pune, root canal treatment hinjewadi, dental implants cost pune, teeth whitening, braces invisalign pune, cosmetic dentistry, painless dentistry"
+        canonical="/services"
+      />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(servicesSchema)}</script>
+      </Helmet>
+      <div className="min-h-screen">
+        <Header />
+        <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-dental-teal-light via-background to-dental-mint">
           <div className="container">
@@ -187,10 +219,11 @@ const ServicesPage = () => {
             </Link>
           </div>
         </section>
-      </main>
-      <Footer />
-      <StickyBookingButton />
-    </div>
+        </main>
+        <Footer />
+        <StickyBookingButton />
+      </div>
+    </>
   );
 };
 

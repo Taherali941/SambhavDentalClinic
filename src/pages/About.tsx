@@ -5,6 +5,7 @@ import { StickyBookingButton } from "@/components/StickyBookingButton";
 import { Link } from "react-router-dom";
 import { Award, GraduationCap, Heart, Users, Calendar } from "lucide-react";
 import dentistPortrait from "@/assets/dentist-portrait.jpg";
+import { SEO } from "@/components/SEO";
 
 const credentials = [
   "Bachelor of Dental Surgery (BDS)",
@@ -34,8 +35,15 @@ const values = [
 
 const AboutPage = () => {
   return (
-    <div className="min-h-screen">
-      <Header />
+    <>
+      <SEO
+        title="About Dr. Priyanka Kaushal | Best Dentist in Hinjewadi Pune"
+        description="Meet Dr. Priyanka Kaushal, BDS, MDS with 20+ years experience. Trusted dentist in Hinjewadi, Pune offering gentle, painless dental care. Learn about our qualifications and patient-first philosophy."
+        keywords="dr priyanka kaushal, dentist hinjewadi, best dentist pune, female dentist pune, experienced dentist, painless dentistry, dental expert pune"
+        canonical="/about"
+      />
+      <div className="min-h-screen">
+        <Header />
       <main className="pt-16 md:pt-20">
         {/* Hero Section */}
         <section className="py-12 md:py-20 bg-gradient-to-br from-dental-teal-light via-background to-dental-sage-light">
@@ -166,10 +174,11 @@ const AboutPage = () => {
             </Link>
           </div>
         </section>
-      </main>
-      <Footer />
-      <StickyBookingButton />
-    </div>
+        </main>
+        <Footer />
+        <StickyBookingButton />
+      </div>
+    </>
   );
 };
 

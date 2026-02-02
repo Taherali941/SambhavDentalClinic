@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { StickyBookingButton } from "@/components/StickyBookingButton";
 import { Link } from "react-router-dom";
 import { Star, Quote, Calendar } from "lucide-react";
+import { SEO } from "@/components/SEO";
+import { Helmet } from "react-helmet-async";
 
 const testimonials = [
   {
@@ -81,10 +83,46 @@ const testimonials = [
 ];
 
 const TestimonialsPage = () => {
+  // Review Schema for SEO
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Sambhav Dental Clinic",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "500",
+      bestRating: "5",
+    },
+    review: testimonials.slice(0, 5).map((t) => ({
+      "@type": "Review",
+      author: {
+        "@type": "Person",
+        name: t.name,
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: t.rating,
+        bestRating: "5",
+      },
+      reviewBody: t.content,
+    })),
+  };
+
   return (
-    <div className="min-h-screen">
-      <Header />
-      <main className="pt-20">
+    <>
+      <SEO
+        title="Patient Reviews & Testimonials | Sambhav Dental Clinic"
+        description="Read 500+ patient reviews of Sambhav Dental Clinic, Hinjewadi. 4.9★ Google rating. Real experiences from patients about root canal, implants, teeth whitening, and more."
+        keywords="sambhav dental reviews, dentist reviews pune, dental clinic testimonials, patient feedback hinjewadi, best rated dentist pune"
+        canonical="/testimonials"
+      />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(reviewSchema)}</script>
+      </Helmet>
+      <div className="min-h-screen">
+        <Header />
+        <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-dental-cream via-background to-dental-teal-light">
           <div className="container">
@@ -185,10 +223,11 @@ const TestimonialsPage = () => {
             </Link>
           </div>
         </section>
-      </main>
-      <Footer />
-      <StickyBookingButton />
-    </div>
+        </main>
+        <Footer />
+        <StickyBookingButton />
+      </div>
+    </>
   );
 };
 
