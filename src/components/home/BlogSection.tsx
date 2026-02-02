@@ -103,9 +103,9 @@ export function BlogSection() {
           </p>
         </div>
 
-        {/* Blog Grid */}
+        {/* Blog Grid - Show only first 6 */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blogPosts.map((post) => (
+          {blogPosts.slice(0, 6).map((post) => (
             <article
               key={post.id}
               className="bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
