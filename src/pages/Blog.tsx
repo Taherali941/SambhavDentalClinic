@@ -4,7 +4,8 @@ import { StickyBookingButton } from "@/components/StickyBookingButton";
 import { Clock, ArrowRight, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
-
+import { SEO } from "@/components/SEO";
+import { Helmet } from "react-helmet-async";
 const blogPosts = [
   {
     id: 1,
@@ -287,10 +288,34 @@ const BlogPage = () => {
     return matchesSearch && matchesCategory;
   });
 
+  // Generate FAQ Schema for SEO
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: blogPosts.slice(0, 5).map((post) => ({
+      "@type": "Question",
+      name: post.title,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: post.excerpt,
+      },
+    })),
+  };
+
   return (
-    <div className="min-h-screen">
-      <Header />
-      <main className="pt-20">
+    <>
+      <SEO
+        title="Dental Health Blog | Tips & Guides by Sambhav Dental Clinic"
+        description="Expert dental health tips, guides, and articles by Dr. Priyanka Kaushal. Learn about teeth whitening, root canal, dental implants, braces, and oral care at Sambhav Dental Clinic, Hinjewadi."
+        keywords="dental blog, teeth whitening tips, root canal guide, dental implants cost, braces vs invisalign, dental care tips, oral health advice, dentist advice pune"
+        canonical="/blog"
+      />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Helmet>
+      <div className="min-h-screen">
+        <Header />
+        <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-dental-teal-light via-background to-dental-mint">
           <div className="container">
@@ -396,10 +421,11 @@ const BlogPage = () => {
             )}
           </div>
         </section>
-      </main>
-      <Footer />
-      <StickyBookingButton />
-    </div>
+        </main>
+        <Footer />
+        <StickyBookingButton />
+      </div>
+    </>
   );
 };
 

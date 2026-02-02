@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { SEO } from "@/components/SEO";
 import {
   Phone,
   MapPin,
@@ -62,9 +63,16 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen">
-      <Header />
-      <main className="pt-16 md:pt-20">
+    <>
+      <SEO
+        title="Book Appointment | Sambhav Dental Clinic Hinjewadi"
+        description="Book your dental appointment at Sambhav Dental Clinic, Hinjewadi, Pune. Call 8237100519 or fill our online form. Located near Metro Station, Shivaji Chowk. Open Monday-Sunday."
+        keywords="book dentist appointment pune, dental clinic contact, dentist near me hinjewadi, dental appointment online, sambhav dental contact"
+        canonical="/contact"
+      />
+      <div className="min-h-screen">
+        <Header />
+        <main className="pt-16 md:pt-20">
         {/* Hero Section */}
         <section className="py-12 md:py-20 bg-gradient-to-br from-dental-teal-light via-background to-dental-mint">
           <div className="container">
@@ -237,9 +245,10 @@ const ContactPage = () => {
             </div>
           </div>
         </section>
-      </main>
-      <Footer />
-    </div>
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 };
 

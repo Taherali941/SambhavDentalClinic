@@ -1,12 +1,19 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingContactButtons } from "@/components/FloatingContactButtons";
+import { SEO } from "@/components/SEO";
 
 const Terms = () => {
   return (
-    <div className="min-h-screen">
-      <Header />
-      <main className="py-20">
+    <>
+      <SEO
+        title="Terms of Service | Sambhav Dental Clinic"
+        description="Terms of service for Sambhav Dental Clinic, Hinjewadi, Pune. Appointment policy, treatment consent, payment terms, and clinic hours."
+        canonical="/terms"
+      />
+      <div className="min-h-screen">
+        <Header />
+        <main className="py-20">
         <div className="container max-w-4xl">
           <h1 className="text-4xl font-bold text-foreground mb-8">Terms of Service</h1>
           
@@ -55,10 +62,11 @@ const Terms = () => {
             <p className="text-sm mt-8">Last updated: January 2026</p>
           </div>
         </div>
-      </main>
-      <Footer />
-      <FloatingContactButtons />
-    </div>
+        </main>
+        <Footer />
+        <FloatingContactButtons />
+      </div>
+    </>
   );
 };
 
