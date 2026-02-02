@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Phone, Calendar, Shield, Award } from "lucide-react";
+import { Phone, Calendar, Star, Award } from "lucide-react";
 import heroDental from "@/assets/hero-dental.jpg";
 
 export function HeroSection() {
@@ -58,7 +58,7 @@ export function HeroSection() {
           <div className="grid grid-cols-2 gap-4 md:gap-6 animate-fade-up animation-delay-400">
             <div className="flex items-center gap-2 md:gap-3">
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-primary/20 flex items-center justify-center">
-                <Shield className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+                <Calendar className="w-5 h-5 md:w-6 md:h-6 text-primary" />
               </div>
               <div>
                 <p className="text-xl md:text-2xl font-bold text-primary-foreground">20+</p>
@@ -67,7 +67,7 @@ export function HeroSection() {
             </div>
             <div className="flex items-center gap-2 md:gap-3">
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-primary/20 flex items-center justify-center">
-                <Award className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+                <Star className="w-5 h-5 md:w-6 md:h-6 text-primary" />
               </div>
               <div>
                 <p className="text-xl md:text-2xl font-bold text-primary-foreground">4.9★</p>
