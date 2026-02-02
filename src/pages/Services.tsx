@@ -13,6 +13,12 @@ import {
   Smile,
   CheckCircle,
   Calendar,
+  Scissors,
+  Baby,
+  AlignHorizontalSpaceAround,
+  Puzzle,
+  Target,
+  Palette,
 } from "lucide-react";
 
 const services = [
@@ -32,7 +38,7 @@ const services = [
   },
   {
     id: "extractions",
-    icon: Zap,
+    icon: Scissors,
     title: "Tooth Extractions",
     description: "Safe and painless tooth removal procedures for various dental conditions.",
     features: [
@@ -46,7 +52,7 @@ const services = [
   },
   {
     id: "pediatric",
-    icon: Smile,
+    icon: Baby,
     title: "Pediatric Dentistry",
     description: "Specialized gentle dental care designed for children of all ages.",
     features: [
@@ -60,7 +66,7 @@ const services = [
   },
   {
     id: "orthodontics",
-    icon: Sparkles,
+    icon: AlignHorizontalSpaceAround,
     title: "Orthodontic Treatment",
     description: "Straighten your teeth with modern braces and aligners for a perfect smile.",
     features: [
@@ -74,7 +80,7 @@ const services = [
   },
   {
     id: "dentures",
-    icon: Crown,
+    icon: Puzzle,
     title: "Dentures & Prosthetics",
     description: "Replace missing teeth with comfortable, natural-looking dentures and prosthetics.",
     features: [
@@ -102,7 +108,7 @@ const services = [
   },
   {
     id: "implants",
-    icon: Crown,
+    icon: Target,
     title: "Dental Implants",
     description: "Permanent, natural-looking tooth replacement solutions that last a lifetime.",
     features: [
@@ -130,7 +136,7 @@ const services = [
   },
   {
     id: "cosmetic",
-    icon: Sparkles,
+    icon: Palette,
     title: "Cosmetic Dentistry",
     description: "Transform your smile with our advanced cosmetic dental treatments.",
     features: [
