@@ -5,26 +5,23 @@ import { StickyBookingButton } from "@/components/StickyBookingButton";
 import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { Helmet } from "react-helmet-async";
-import {
-  Heart,
-  Sparkles,
-  Zap,
-  Crown,
-  Smile,
-  CheckCircle,
-  Calendar,
-  Scissors,
-  Baby,
-  AlignHorizontalSpaceAround,
-  Puzzle,
-  Target,
-  Palette,
-} from "lucide-react";
+import { CheckCircle, Calendar } from "lucide-react";
+import { FaTooth, FaTeethOpen, FaChild, FaTeeth } from "react-icons/fa";
+import { 
+  GiTooth, 
+  GiToothbrush, 
+  GiCrown,
+  GiTargetShot,
+  GiSparkles,
+  GiHealthNormal
+} from "react-icons/gi";
+import { MdOutlineCleanHands, MdFace } from "react-icons/md";
+import { TbDental } from "react-icons/tb";
 
 const services = [
   {
     id: "general",
-    icon: Heart,
+    icon: GiHealthNormal,
     title: "General Dentistry",
     description: "Comprehensive dental care to maintain your oral health and prevent future problems.",
     features: [
@@ -38,7 +35,7 @@ const services = [
   },
   {
     id: "extractions",
-    icon: Scissors,
+    icon: FaTooth,
     title: "Tooth Extractions",
     description: "Safe and painless tooth removal procedures for various dental conditions.",
     features: [
@@ -52,7 +49,7 @@ const services = [
   },
   {
     id: "pediatric",
-    icon: Baby,
+    icon: FaChild,
     title: "Pediatric Dentistry",
     description: "Specialized gentle dental care designed for children of all ages.",
     features: [
@@ -66,7 +63,7 @@ const services = [
   },
   {
     id: "orthodontics",
-    icon: AlignHorizontalSpaceAround,
+    icon: FaTeeth,
     title: "Orthodontic Treatment",
     description: "Straighten your teeth with modern braces and aligners for a perfect smile.",
     features: [
@@ -80,7 +77,7 @@ const services = [
   },
   {
     id: "dentures",
-    icon: Puzzle,
+    icon: FaTeethOpen,
     title: "Dentures & Prosthetics",
     description: "Replace missing teeth with comfortable, natural-looking dentures and prosthetics.",
     features: [
@@ -94,7 +91,7 @@ const services = [
   },
   {
     id: "crowns",
-    icon: Crown,
+    icon: GiCrown,
     title: "Dental Crowns & Bridges",
     description: "Restore damaged teeth with high-quality crowns made from premium materials.",
     features: [
@@ -108,7 +105,7 @@ const services = [
   },
   {
     id: "implants",
-    icon: Target,
+    icon: GiTargetShot,
     title: "Dental Implants",
     description: "Permanent, natural-looking tooth replacement solutions that last a lifetime.",
     features: [
@@ -122,7 +119,7 @@ const services = [
   },
   {
     id: "root-canal",
-    icon: Zap,
+    icon: TbDental,
     title: "Root Canal Treatment",
     description: "Save your natural teeth with our advanced, painless root canal procedures.",
     features: [
@@ -136,7 +133,7 @@ const services = [
   },
   {
     id: "cosmetic",
-    icon: Palette,
+    icon: GiSparkles,
     title: "Cosmetic Dentistry",
     description: "Transform your smile with our advanced cosmetic dental treatments.",
     features: [
