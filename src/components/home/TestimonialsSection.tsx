@@ -4,7 +4,7 @@ import { Star, Quote, ArrowRight } from "lucide-react";
 
 const testimonials = [
 {
-  name: "Priya Sharma",
+  name: "Kiran Mahajan",
   role: "Patient since 2021",
   rating: 5,
   content: "Dr. Priyanka is extremely gentle and professional. My root canal was completely painless! The clinic is spotless and the staff is very caring. Highly recommend for anyone in Hinjewadi.",
