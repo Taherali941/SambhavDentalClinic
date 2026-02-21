@@ -32,36 +32,61 @@ const ContactPage = () => {
     treatment: "",
     message: "",
   });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  const validate = () => {
+    const newErrors: Record<string, string> = {};
+
+    if (!formData.name.trim()) {
+      newErrors.name = "Full name is required.";
+    } else if (formData.name.trim().length > 100) {
+      newErrors.name = "Name must be less than 100 characters.";
+    }
+
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone number is required.";
+    } else if (!/^\d{10}$/.test(formData.phone.trim())) {
+      newErrors.phone = "Enter a valid 10-digit mobile number.";
+    }
+
+    if (!formData.treatment) {
+      newErrors.treatment = "Please select a treatment type.";
+    }
+
+    if (formData.message.length > 1000) {
+      newErrors.message = "Message must be less than 1000 characters.";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Basic validation
-    if (!formData.name || !formData.phone || !formData.treatment) {
+
+    if (!validate()) {
       toast({
-        title: "Please fill in required fields",
-        description: "Name, phone, and treatment type are required.",
+        title: "Please fix the errors",
+        description: "Some fields need your attention.",
         variant: "destructive",
       });
       return;
     }
 
-    // Success toast
-    toast({
-      title: "Appointment Request Sent!",
-      description: "We'll call you within 24 hours to confirm your appointment.",
-    });
+    const name = formData.name.trim();
+    const phone = formData.phone.trim();
+    const date = formData.date || "Not specified";
+    const treatment = formData.treatment;
+    const message = formData.message.trim() || "No additional message";
 
-    // Reset form
-    setFormData({
-      name: "",
-      phone: "",
-      date: "",
-      treatment: "",
-      message: "",
-    });
+    const text = `🦷 *Appointment Request*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Preferred Date:* ${encodeURIComponent(date)}%0A*Treatment:* ${encodeURIComponent(treatment)}%0A*Message:* ${encodeURIComponent(message)}`;
+
+    const whatsappUrl = `https://wa.me/918237100519?text=${text}`;
+    window.open(whatsappUrl, "_blank");
+
+    setFormData({ name: "", phone: "", date: "", treatment: "", message: "" });
+    setErrors({});
   };
-
   return (
     <>
       <SEO
@@ -116,8 +141,10 @@ const ContactPage = () => {
                           placeholder="Your Name"
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          className="h-11 md:h-12"
+                          className={`h-11 md:h-12 ${errors.name ? "border-destructive" : ""}`}
+                          maxLength={100}
                         />
+                        {errors.name && <p className="text-destructive text-xs mt-1">{errors.name}</p>}
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-foreground mb-2">
@@ -125,11 +152,16 @@ const ContactPage = () => {
                         </label>
                         <Input
                           type="tel"
-                          placeholder="Your Phone Number"
+                          placeholder="10-digit mobile number"
                           value={formData.phone}
-                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="h-11 md:h-12"
+                          onChange={(e) => {
+                            const val = e.target.value.replace(/\D/g, "").slice(0, 10);
+                            setFormData({ ...formData, phone: val });
+                          }}
+                          className={`h-11 md:h-12 ${errors.phone ? "border-destructive" : ""}`}
+                          maxLength={10}
                         />
+                        {errors.phone && <p className="text-destructive text-xs mt-1">{errors.phone}</p>}
                       </div>
                     </div>
 
@@ -152,7 +184,7 @@ const ContactPage = () => {
                       <select
                         value={formData.treatment}
                         onChange={(e) => setFormData({ ...formData, treatment: e.target.value })}
-                        className="w-full h-11 md:h-12 px-4 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring text-sm md:text-base"
+                        className={`w-full h-11 md:h-12 px-4 rounded-lg border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring text-sm md:text-base ${errors.treatment ? "border-destructive" : "border-input"}`}
                       >
                         <option value="">Select a treatment</option>
                         {treatmentOptions.map((option) => (
@@ -161,6 +193,7 @@ const ContactPage = () => {
                           </option>
                         ))}
                       </select>
+                      {errors.treatment && <p className="text-destructive text-xs mt-1">{errors.treatment}</p>}
                     </div>
 
                     <div>
