@@ -9,10 +9,10 @@ import { SEO } from "@/components/SEO";
 
 const credentials = [
 "Bachelor of Dental Surgery (BDS)",
-"Master of Dental Surgery (MDS) - Prosthodontics",
-"Member, Indian Dental Association",
-"Advanced Training in Dental Implants",
-"Certified in Cosmetic Dentistry"];
+"Certification in Rotary Endodontics",
+"Certification in 3rd Molar Surgery",
+"Certification in Complete Denture",
+"Certification in Cosmetic Dentistry"];
 
 
 const values = [
