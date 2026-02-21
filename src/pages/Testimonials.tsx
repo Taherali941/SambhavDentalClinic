@@ -18,7 +18,7 @@ const testimonials = [
     date: "December 2024",
   },
   {
-    name: "James Wilson",
+    name: "Salim Shaikh",
     role: "Root Canal Patient",
     rating: 5,
     content: "Clean clinic, painless root canal, friendly staff. I was dreading the procedure but Dr. Chen made it completely stress-free. The modern equipment really makes a difference. Best dental experience ever.",
