@@ -1,8 +1,7 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { StickyBookingButton } from "@/components/StickyBookingButton";
-import { Clock, ArrowRight, Search } from "lucide-react";
-import { Input } from "@/components/ui/input";
+import { Clock, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { SEO } from "@/components/SEO";
 import { Helmet } from "react-helmet-async";
@@ -277,15 +276,12 @@ Most patients recover fully within 1-2 weeks. Dr. Priyanka Kaushal at Sambhav De
 const categories = ["All", "Dental Care", "Root Canal", "Teeth Whitening", "Dental Implants", "Orthodontics", "Oral Surgery"];
 
 const BlogPage = () => {
-  const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [expandedPost, setExpandedPost] = useState<number | null>(null);
 
   const filteredPosts = blogPosts.filter((post) => {
-    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === "All" || post.category === selectedCategory;
-    return matchesSearch && matchesCategory;
+    return matchesCategory;
   });
 
   // Generate FAQ Schema for SEO
@@ -326,22 +322,10 @@ const BlogPage = () => {
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                 Expert Dental Tips & Guides
               </h1>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-lg text-muted-foreground">
                 Stay informed with our latest articles on dental care, treatments, 
                 and tips for maintaining a healthy, beautiful smile.
               </p>
-
-              {/* Search */}
-              <div className="relative max-w-md mx-auto">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-                <Input
-                  type="text"
-                  placeholder="Search articles..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-12 h-12 text-base"
-                />
-              </div>
             </div>
           </div>
         </section>
