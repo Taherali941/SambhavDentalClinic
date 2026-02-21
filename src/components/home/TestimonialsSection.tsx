@@ -3,35 +3,35 @@ import { Button } from "@/components/ui/button";
 import { Star, Quote, ArrowRight } from "lucide-react";
 
 const testimonials = [
-  {
-    name: "Priya Sharma",
-    role: "Patient since 2021",
-    rating: 5,
-    content: "Dr. Priyanka is extremely gentle and professional. My root canal was completely painless! The clinic is spotless and the staff is very caring. Highly recommend for anyone in Hinjewadi.",
-    avatar: "PS",
-  },
-  {
-    name: "Rahul Deshmukh",
-    role: "Patient since 2019",
-    rating: 5,
-    content: "Best dental clinic in Pune! Got my dental implants done here and the results are amazing. The transparent pricing and follow-up care is exceptional.",
-    avatar: "RD",
-  },
-  {
-    name: "Sneha Kulkarni",
-    role: "Patient since 2022",
-    rating: 5,
-    content: "The whole family comes here now. Kids love Dr. Priyanka's gentle approach, and we appreciate the honest consultations. No unnecessary treatments recommended.",
-    avatar: "SK",
-  },
-  {
-    name: "Amit Patil",
-    role: "Patient since 2023",
-    rating: 5,
-    content: "Got my teeth whitening done here and the results exceeded my expectations! Modern equipment, hygienic environment, and very reasonable prices. Five stars!",
-    avatar: "AP",
-  },
-];
+{
+  name: "Priya Sharma",
+  role: "Patient since 2021",
+  rating: 5,
+  content: "Dr. Priyanka is extremely gentle and professional. My root canal was completely painless! The clinic is spotless and the staff is very caring. Highly recommend for anyone in Hinjewadi.",
+  avatar: "PS"
+},
+{
+  name: "Rahul Deshmukh",
+  role: "Patient since 2019",
+  rating: 5,
+  content: "Best dental clinic in Pune! Got my dental implants done here and the results are amazing. The transparent pricing and follow-up care is exceptional.",
+  avatar: "RD"
+},
+{
+  name: "Sneha Kulkarni",
+  role: "Patient since 2022",
+  rating: 5,
+  content: "The whole family comes here now. Kids love Dr. Priyanka's gentle approach, and we appreciate the honest consultations. No unnecessary treatments recommended.",
+  avatar: "SK"
+},
+{
+  name: "Amit Patil",
+  role: "Patient since 2023",
+  rating: 5,
+  content: "Got my teeth whitening done here and the results exceeded my expectations! Modern equipment, hygienic environment, and very reasonable prices. Five stars!",
+  avatar: "AP"
+}];
+
 
 export function TestimonialsSection() {
   return (
@@ -54,9 +54,9 @@ export function TestimonialsSection() {
         <div className="flex justify-center mb-12">
           <div className="inline-flex items-center gap-4 bg-card rounded-full px-6 py-3 shadow-card">
             <div className="flex items-center gap-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-              ))}
+              {[...Array(5)].map((_, i) =>
+              <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+              )}
             </div>
             <div className="h-6 w-px bg-border" />
             <div className="text-sm">
@@ -68,20 +68,20 @@ export function TestimonialsSection() {
 
         {/* Testimonials Grid */}
         <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={testimonial.name}
-              className="bg-card rounded-2xl p-8 shadow-card relative"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
+          {testimonials.map((testimonial, index) =>
+          <div
+            key={testimonial.name}
+            className="bg-card rounded-2xl p-8 shadow-card relative"
+            style={{ animationDelay: `${index * 100}ms` }}>
+
               {/* Quote Icon */}
               <Quote className="absolute top-6 right-6 w-10 h-10 text-dental-teal-light" />
 
               {/* Rating */}
               <div className="flex items-center gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                ))}
+                {[...Array(testimonial.rating)].map((_, i) =>
+              <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+              )}
               </div>
 
               {/* Content */}
@@ -96,11 +96,11 @@ export function TestimonialsSection() {
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                  
                 </div>
               </div>
             </div>
-          ))}
+          )}
         </div>
 
         {/* View All CTA */}
@@ -113,6 +113,6 @@ export function TestimonialsSection() {
           </Link>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
