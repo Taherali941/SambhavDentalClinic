@@ -8,30 +8,30 @@ import dentistPortrait from "@/assets/dentist-portrait.jpg";
 import { SEO } from "@/components/SEO";
 
 const credentials = [
-  "Bachelor of Dental Surgery (BDS)",
-  "Master of Dental Surgery (MDS) - Prosthodontics",
-  "Member, Indian Dental Association",
-  "Advanced Training in Dental Implants",
-  "Certified in Cosmetic Dentistry",
-];
+"Bachelor of Dental Surgery (BDS)",
+"Master of Dental Surgery (MDS) - Prosthodontics",
+"Member, Indian Dental Association",
+"Advanced Training in Dental Implants",
+"Certified in Cosmetic Dentistry"];
+
 
 const values = [
-  {
-    icon: Heart,
-    title: "Patient-First Philosophy",
-    description: "Every decision we make is guided by what's best for your oral health and comfort.",
-  },
-  {
-    icon: Award,
-    title: "Excellence in Care",
-    description: "We stay updated with the latest techniques and technologies to provide the best outcomes.",
-  },
-  {
-    icon: Users,
-    title: "Family-Friendly",
-    description: "We treat patients of all ages, from toddlers to seniors, with the same gentle care.",
-  },
-];
+{
+  icon: Heart,
+  title: "Patient-First Philosophy",
+  description: "Every decision we make is guided by what's best for your oral health and comfort."
+},
+{
+  icon: Award,
+  title: "Excellence in Care",
+  description: "We stay updated with the latest techniques and technologies to provide the best outcomes."
+},
+{
+  icon: Users,
+  title: "Family-Friendly",
+  description: "We treat patients of all ages, from toddlers to seniors, with the same gentle care."
+}];
+
 
 const AboutPage = () => {
   return (
@@ -40,8 +40,8 @@ const AboutPage = () => {
         title="About Dr. Priyanka Kaushal | Best Dentist in Hinjewadi Pune"
         description="Meet Dr. Priyanka Kaushal, BDS, MDS with 20+ years experience. Trusted dentist in Hinjewadi, Pune offering gentle, painless dental care. Learn about our qualifications and patient-first philosophy."
         keywords="dr priyanka kaushal, dentist hinjewadi, best dentist pune, female dentist pune, experienced dentist, painless dentistry, dental expert pune"
-        canonical="/about"
-      />
+        canonical="/about" />
+
       <div className="min-h-screen">
         <Header />
       <main className="pt-16 md:pt-20">
@@ -78,10 +78,10 @@ const AboutPage = () => {
               {/* Image */}
               <div className="relative order-1 lg:order-2">
                 <img
-                  src={dentistPortrait}
-                  alt="Dr. Priyanka Kaushal - Lead Dentist"
-                  className="rounded-2xl md:rounded-3xl shadow-xl w-full object-cover aspect-[4/5] md:aspect-[3/4]"
-                />
+
+                    alt="Dr. Priyanka Kaushal - Lead Dentist"
+                    className="rounded-2xl md:rounded-3xl shadow-xl w-full object-cover aspect-[4/5] md:aspect-[3/4]" src="/lovable-uploads/ffa67486-c91d-4493-9cd6-72971f80b9bb.webp" />
+
                 <div className="absolute -bottom-4 -left-2 md:-bottom-6 md:-left-6 bg-card rounded-xl md:rounded-2xl p-4 md:p-6 shadow-lg">
                   <div className="flex items-center gap-3 md:gap-4">
                     <div className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-primary flex items-center justify-center">
@@ -113,14 +113,14 @@ const AboutPage = () => {
 
               <div className="bg-card rounded-xl md:rounded-2xl p-6 md:p-8 shadow-card">
                 <ul className="space-y-3 md:space-y-4">
-                  {credentials.map((credential) => (
+                  {credentials.map((credential) =>
                     <li key={credential} className="flex items-center gap-3 md:gap-4">
                       <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-dental-teal-light flex items-center justify-center flex-shrink-0">
                         <Award className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                       </div>
                       <span className="text-foreground font-medium text-sm md:text-base">{credential}</span>
                     </li>
-                  ))}
+                    )}
                 </ul>
               </div>
             </div>
@@ -140,7 +140,7 @@ const AboutPage = () => {
             </div>
 
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-              {values.map((value) => (
+              {values.map((value) =>
                 <div key={value.title} className="text-center">
                   <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-dental-teal-light flex items-center justify-center mx-auto mb-4 md:mb-6">
                     <value.icon className="w-6 h-6 md:w-8 md:h-8 text-primary" />
@@ -152,7 +152,7 @@ const AboutPage = () => {
                     {value.description}
                   </p>
                 </div>
-              ))}
+                )}
             </div>
           </div>
         </section>
@@ -178,8 +178,8 @@ const AboutPage = () => {
         <Footer />
         <StickyBookingButton />
       </div>
-    </>
-  );
+    </>);
+
 };
 
 export default AboutPage;
